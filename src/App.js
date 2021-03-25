@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+// Import data
+import {postings} from './postings'
+// Import components
 import './App.css';
+import Directory from './Components/Directory'
+import Gallery from './Components/Gallery'
+import Searchbar from './Components/Searchbar'
+import Sidebar from './Components/Sidebar'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>nickslist</h1>
+      <div className="App">
+        <Searchbar />
+        <Directory />
+        <Sidebar />
+        <Gallery postings={postings} />
+      </div>
     </div>
   );
 }
