@@ -3,7 +3,7 @@
 // Import components
 import './App.css';
 
-const App = () => {
+function App(){
   return (
     <div>
       <h1>craigslist</h1>
